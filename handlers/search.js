@@ -35,33 +35,20 @@ exports.searchApi = function(req,res,next){
         lon = parseFloat(lon);
     }
     var query = {
-  "query": {
-    "filtered": {
-      "filter": {
-        "geo_distance_range": {
-          "lt": "500km",
-          "location": {
-            "lat": lat,
-            "lon": lon
+      "sort": [
+        {
+          "_geo_distance": {
+            "location": {
+                "lat": lat,
+                "lon": lon
+            },
+            "order": "asc",
+            "unit": "km",
+            "distance_type": "plane"
           }
         }
-      }
-    }
-  },
-  "sort": [
-    {
-      "_geo_distance": {
-        "location": {
-            "lat": lat,
-            "lon": lon
-        },
-        "order": "asc",
-        "unit": "km",
-        "distance_type": "plane"
-      }
-    }
-  ]
-};
+      ]
+    };
 
     request({
         url: base_es + "_search/",
