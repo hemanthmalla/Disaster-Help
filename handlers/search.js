@@ -13,8 +13,8 @@ var config = require(global.__base + 'config');
 var base_es = config.es_base;
 
 exports.searchApi = function(req,res,next){
-    var lat = req.body.lat;
-    var lon = req.body.lon;
+    var lat = req.query.lat;
+    var lon = req.query.lon;
     var tags = decodeURIComponent(req.body.tags?req.body.tags:'[]');
     var address = req.body.address;
     var locality = req.body.locality;
