@@ -15,11 +15,11 @@ var base_es = config.es_base;
 exports.searchApi = function(req,res,next){
     var lat = req.query.lat;
     var lon = req.query.lon;
-    var tags = decodeURIComponent(req.body.tags?req.body.tags:'[]');
-    var address = req.body.address;
-    var locality = req.body.locality;
-    var name = req.body.name;
-    var title = req.body.title;
+    var tags = decodeURIComponent(req.query.tags?req.query.tags:'[]');
+    var address = req.query.address;
+    var locality = req.query.locality;
+    var name = req.query.name;
+    var title = req.query.title;
 
     if(tags)tags = JSON.parse(tags);
 

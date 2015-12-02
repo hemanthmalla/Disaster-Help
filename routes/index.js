@@ -10,6 +10,6 @@ var searchHandler = require(global.__base + 'handlers/search');
 
 
 router.post('/post/',postHandler.postApi);
-router.post('/search/',searchHandler.searchApi);
+router.get('/search/',searchHandler.searchApi);
 
 module.exports = router;
