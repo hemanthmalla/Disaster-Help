@@ -39,7 +39,7 @@ app.use(function(req, res, next) {
     req_info.bodyParams = req.body;
     req_info.queryParams = req.query;
     req_info.headers = req.headers;
-    req.log.info(req_info);
+    req.log.info(req_info,"Request came in with : ");
 
     next();
 });

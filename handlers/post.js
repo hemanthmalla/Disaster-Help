@@ -31,6 +31,7 @@ exports.postApi = function(req,res,next){
     if(locality)data.locality = locality;
     if(title)data.title = title;
     if(tags)data.tags = tags;
+    if(phone)data.phone = phone;
 
     if(lat && lon){
         lat = parseFloat(lat);

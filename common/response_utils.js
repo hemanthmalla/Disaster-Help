@@ -28,11 +28,9 @@ exports.respondAndLog = function(req,res,status_code,data,extra){
     var lat = req.query.lat;
     var long = req.query.long;
 
-    data.bodyParams = req.body;
-    data.queryParams = req.query;
     data.code = status_code.status;
     data.timeTaken = new Date - req.startTime;
     data.ips = req.ips;
     if((lat != undefined) && (long != undefined))data.deviceLocation = [parseFloat(lat),parseFloat(long)];
-    req.log.info(data);
+    req.log.info(data, "Responding with : ");
 };

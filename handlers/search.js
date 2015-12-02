@@ -75,7 +75,6 @@ exports.searchApi = function(req,res,next){
             response_utils.respondAndLog(req,res,status_codes.FAILURE,"Failed to fetch data",{});
         } else {
             var data = JSON.parse(body);
-            req.log.info(data);
             var results = data["hits"]["hits"];
             var fin_results = [];
             for(var i=0;i<results.length;i++){
