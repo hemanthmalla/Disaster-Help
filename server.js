@@ -61,6 +61,10 @@ app.use(function(req, res, next) {
 
 app.use('/', routes);
 
+process.on('uncaughtException', function(err) {
+  log.error('Something broke!!! - ' + err.stack);
+});
+
 
 log.info(app.get('env'));
 if (app.get('env') === 'development') {
