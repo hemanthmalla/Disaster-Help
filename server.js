@@ -23,7 +23,7 @@ app.use(function(req, res, next){
     }
 });
 
-var allowedDomains = ['http://www.helpchennai.in','www.helpchennai.in'];
+var allowedDomains = ['http://www.helpchennai.in','www.helpchennai.in','helpchennai.in','http://helpchennai.in'];
 
 var allowCrossDomain = function(req, res, next) {
     var origin = req.headers.origin;
