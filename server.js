@@ -27,17 +27,11 @@ var allowedDomains = ['http://www.helpchennai.in','www.helpchennai.in'];
 
 var allowCrossDomain = function(req, res, next) {
     var origin = req.headers.origin;
-    if(config.isProduction){
         if(allowedDomains.indexOf(origin) > -1){
             res.header('Access-Control-Allow-Origin',origin);
             res.header('Access-Control-Allow-Credentials', 'true');
             res.header('Access-Control-Allow-Headers', 'Content-Type');
         }
-    }else{
-        res.header('Access-Control-Allow-Origin',origin);
-        res.header('Access-Control-Allow-Credentials', 'true');
-        res.header('Access-Control-Allow-Headers', 'Content-Type');
-    }
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,OPTIONS');
     next();
 };
