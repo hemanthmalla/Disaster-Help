@@ -1,0 +1,6 @@
+.idea*
+docs/site/
+*.log
+node_modules/*
+src/config.js
+.DS_Store

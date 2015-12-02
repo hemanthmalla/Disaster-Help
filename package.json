@@ -1,0 +1,22 @@
+{
+  "name": "chennai_resuce_apis",
+  "version": "0.0.0",
+  "description": "chennai_resuce_apis",
+  "main": "index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Hemanth Malla (hemanthmalla@gmail.com)",
+  "license": "Private",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "bunyan": "^1.5.1",
+    "errorhandler": "^1.4.2",
+    "express": "^4.13.3",
+    "express-validator": "^2.18.0",
+    "node-uuid": "^1.4.7",
+    "request": "^2.67.0"
+  }
+}
